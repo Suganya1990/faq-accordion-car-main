@@ -1,0 +1,116 @@
+*{
+     margin: 0;
+     padding: 0; 
+     border: 0; 
+     box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.accordion__container{
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+}
+
+.accordion__card{
+    width: 330px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 30px;
+    max-height: null;
+}
+
+.accordion__img{
+ position: absolute;
+ top: -100px;
+ left: 20px;
+
+}
+
+.accordion__img::after{
+    content: url(/images/bg-pattern-mobile.svg);
+    position: relative;
+    top: -85px;
+    left: 30px;
+    z-index: 100;
+
+}
+
+.accordion__content{
+    width: 90%;
+    max-height: 500px;
+    position: absolute;
+    padding: 1em;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    overflow: auto;
+}
+
+.accordion__title{
+   
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 1.5em;
+   
+}
+.accordion__title h1{
+   font-family: 'Kumbh Sans';
+   font-weight: 700;
+}
+.accordion__block{
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+
+}
+.accordion__question{
+
+  
+    color: hsl(240, 6%, 50%);
+    background-color: transparent;
+    font-family: 'Kumbh Sans';
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0 ;
+    
+}
+
+
+.accordion__answer{
+    color:  hsl(237, 12%, 33%);
+    font-family: 'Kumbh Sans';
+    font-size: 12px;
+    font-weight: 400;
+    width: 90%;
+    max-height: 0;
+    overflow: hidden;
+    margin-bottom: 1em;
+    transition: max-height 0.2s ease-out;
+
+}
+
+.button__arrow{
+    transform: scaleY(-1);
+}
+
+
