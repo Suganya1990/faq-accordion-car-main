@@ -38,6 +38,9 @@ body{
  left: 20px;
 
 }
+.accordion__img--background{
+    display: none;
+}
 .accordion__img--desktop{
     display: none;
 }
@@ -46,7 +49,7 @@ body{
 }
 
 .accordion__img::after{
-    content: url(/images/bg-pattern-mobile.svg);
+    content: url(images/bg-pattern-mobile.svg);
     position: relative;
     top: -85px;
     left: 30px;
@@ -123,8 +126,7 @@ body{
 /*  desktop*/
 
 
-
-@media(min-width: 1100px ){
+@media(min-width: 1440px ){
     .accordion__container{
         width: 100%;
         max-height: 100vh;
@@ -135,8 +137,8 @@ body{
     
     .accordion__card{
        
-        width: 60%;
-        height: 60%;
+        width:  70%;
+        height: 70%;
         position: relative;
         left: auto;
         top: auto;
@@ -146,35 +148,51 @@ body{
         display: flex;
 
     }
-    
+    .accordion__img--box{
+        position: absolute;
+
+
+
+    }
     .accordion__img{
 
         grid-area: left;
-   
-        width: 480px;
-        height:600px;
         position: relative !important;
         top: 0;
         left: 0;
-      
+        overflow-x: hidden;
         width: 100%;
         
     }
 
     .accordion__img--desktop{
-    
+        width: auto;
+        height: 76%;
         display: unset;
-        top:90px;
-        left: -50px;
+        top: 30px;
+        left: -100px;
         position: absolute;
         
     }
 
+    .accordion__img--background{
+       display: unset;
+        position: absolute;
+        bottom: -115px; 
+        right: 90px;
+    }
+
     .accordion__img--box{
+        width: auto;
+        height: 38%;
         display: unset;
         position: absolute;
-        top: 250px;
-        left: -100px;
+        top:36%;
+        left:-40px;
+        padding: 0;
+        margin: 0;
+        -ms-transform: translate(-35%, -3%);
+        transform: translate(-35%, -3%);
         z-index: 3;
         overflow: unset;
 
@@ -183,6 +201,7 @@ body{
         display: none;
     
     }
+
     .accordion__img--mobile{
         display: none;
     }
@@ -190,8 +209,10 @@ body{
 
         grid-area: right;
         width: 100%;
-        position: relative;
+        height: 100%;
+        position: unset;
         padding: 0;
+        margin: 0;
         left: 0;
         top: 0;
         -webkit-transform: translate(0, 0);
@@ -199,11 +220,10 @@ body{
         overflow: auto;
         display: flex;
         align-items: center;
-        justify-content: center;
-  
     }
+
     .accordion__wrapper{
-        width: 60%;
+        width: 70%;
     }
     .accordion__title{
        
