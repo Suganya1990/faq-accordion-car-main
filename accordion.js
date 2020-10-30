@@ -18,16 +18,20 @@ for(var i  = 0; i< acc.length; i++){
         var panel = this.nextElementSibling; 
 
         if(panel.style.maxHeight){
+            this.style.fontWeight='400';
+            this.style.color='hsl(240, 6%, 50%)';
             panel.style.maxHeight = null;
-            this.children[0].style.transform ='scaleY(-1)';
+            this.children[0].style.transform ='scaleY(1)';
             
    
           
         } else{
+            console.log(this)
+            this.style.fontWeight='700';
+            this.style.color='Black';
             panel.style.maxHeight = panel.scrollHeight + 'px';
-            this.children[0].style.transform ='scaleY(1)';
-            div[0].style.height+= panel.style.scrollHeight + 'px'
-            
+            this.children[0].style.transform ='scaleY(-1)';
+     
         }
     });
 
